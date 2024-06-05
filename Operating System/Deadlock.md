@@ -19,7 +19,8 @@ _이처럼 무한정 기다리고 있는 상태를 데드락이라고 볼 수 �
 3. No Pre-emption : 프로세스로부터 실행 중간에 자원을 뺏어갈 수 없다.
 4. Circular Wait(순환 대기) : 아래 그림처럼 순환 형태를 이루어야 한다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/71c9eaf7-e499-4e38-ac99-9e49e0b9c88a/4592e97f-74ae-4400-ba46-98da556d73dc/Untitled.png)
+<img width="499" alt="스크린샷 2024-06-04 오후 4 17 17" src="https://github.com/Cwonseo/tech-interview/assets/77488438/26ab9125-cfe3-484c-a66a-c6351584ff1b">
+
 
 ### 자원할당 그래프
 
@@ -27,7 +28,8 @@ _이처럼 무한정 기다리고 있는 상태를 데드락이라고 볼 수 �
 
 프로세스와 자원의 관계, 할당 상태를 표현하는 그래프
 
-![스크린샷 2024-06-04 오후 4.24.33.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/71c9eaf7-e499-4e38-ac99-9e49e0b9c88a/7ccb9fcc-879b-4691-bfe1-389f1a0b6590/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.24.33.png)
+
+<img width="748" alt="스크린샷 2024-06-04 오후 5 59 15" src="https://github.com/Cwonseo/tech-interview/assets/77488438/a2c58eb2-9b35-4708-acb0-c413c28b578d">
 
 | 원                           | 프로세스            |
 | ---------------------------- | ------------------- |
@@ -71,9 +73,7 @@ Circular Wait 없애기.
 불안정상태 : 자원 할당 시 데드락이 발생할 가능성이 있는 상태
 
 안전 순서열 : 데드락 없이 프로세스들에 자원을 할당할 수 있는 순서
-
-![스크린샷 2024-06-04 오후 4.50.12.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/71c9eaf7-e499-4e38-ac99-9e49e0b9c88a/a0dad201-0fd4-420c-8997-d190a2ad7cbd/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.50.12.png)
-
+<img width="652" alt="스크린샷 2024-06-04 오후 6 00 18" src="https://github.com/Cwonseo/tech-interview/assets/77488438/9c872b3f-0973-40cc-9f5d-78327eacd552">
 Claim Matrix : 각 자원의 최대 요청량
 
 Allocation Matrix : 할당된 각 자원의 양
@@ -101,7 +101,7 @@ P1 ~ P4까지 돌며 Availabe Vector와 C-A를 비교하여 **안전상태**라�
 
 **Detect**
 
-![스크린샷 2024-06-04 오후 5.17.34.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/71c9eaf7-e499-4e38-ac99-9e49e0b9c88a/7022c0f6-b047-44d3-bdb5-5eb382e6e899/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.17.34.png)
+<img width="675" alt="스크린샷 2024-06-04 오후 6 00 28" src="https://github.com/Cwonseo/tech-interview/assets/77488438/589e0ccb-e6af-4df3-8f77-99eb879cb373">
 
 Request Matrix : 요청이 받아들여지지 않아 자원할당이 안 된 자원의 개수
 
@@ -134,14 +134,13 @@ P1, P2는 마크되지 않음. 데드락에 빠졌음.
 원탁에 다섯명의 철학자가 앉아있고 철학자들 사이에 포크가 있는 상황이다.
 
 이 때 두개의 포크를 들어야 음식을 먹을 수 있다.
-
+<img width="474" alt="스크린샷 2024-06-04 오후 4 01 52" src="https://github.com/Cwonseo/tech-interview/assets/77488438/8daf47be-a0af-474f-a6a2-a6cb33686850">
 1. 왼쪽 포크 사용이 가능하면 잡는다.
 2. 오른쪽 포크가 사용 가능하면 잡는다.
 3. 일정 시간동안 음식을 먹는다.
 4. 오른쪽 포크를 내려놓는다.
 5. 왼쪽 포크를 내려놓는다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/71c9eaf7-e499-4e38-ac99-9e49e0b9c88a/d75348ac-6300-428f-b0e9-672b2eef73f5/Untitled.png)
 
 위와 같은 순서로 식사를 한다고 가정했을 때
 
@@ -196,3 +195,5 @@ mutual exclusion, hold-and-wait, non pre-emption, circular wait 총 4가지가 �
 </div>
 
 </details>
+
+
