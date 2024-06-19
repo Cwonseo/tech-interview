@@ -8,9 +8,11 @@
 ## 🌍 브라우저의 기본 동작
 
 1. Client에서는 HTTP 요청 헤더에 Origin이라는 데이터를 담아 전달한다.
+
 ![image1](https://github.com/Cwonseo/tech-interview/assets/88311377/26186274-bc55-4142-b2a7-9a76392a636f)
 
 2. Server는 응답 헤더에 Access-Control-Allow-Origin이라는 데이터를 담아 전달한다.
+
 ![image2](https://github.com/Cwonseo/tech-interview/assets/88311377/d5065cc9-d77a-4503-ab34-740309c869d1)
 
 3. 이 경우, Origin(출처)과 Access-Control-Allow-Origin(접근이 허용된 출처)가 동일하기 때문에 브라우저에서 해당 응답을 사용하게 된다.
@@ -20,7 +22,7 @@
 
 ## ❓ CORS 해결 방법
 > CORS는 **Client**와 **Server** 모두 해결을 할 수 있음!
-- 직접 Server를 개발한다면 **Server** 측에서 해결할 수 있고, 만약 Open Api를 사용하거나 Server를 수정할 수 없다면, **Client** 측에서 해결해야 함
+- 직접 Server를 개발한다면 **Server** 측에서 해결할 수 있고, 만약 Open API를 사용하거나 Server를 수정할 수 없다면, **Client** 측에서 해결해야 함
 
 ### 1️⃣ Client 측 해결 방법
 - **⭐️ 프록시 서버 사용**: 프록시 서버를 설정하여, CORS 정책을 **우회** 할 수 있다. 클라이언트는 프록시 서버에 요청을 보내고, 프록시 서버는 실제 서버에 요청을 전달한다.
